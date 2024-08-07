@@ -1,6 +1,7 @@
 // @flow strict
 
 import * as React from 'react';
+import ButtonWithLink from './LinkButton';
 
 function ProjectCard({ project }) {
 
@@ -62,6 +63,11 @@ function ProjectCard({ project }) {
             <span className="text-gray-400">,</span>
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
+          <div className="mt-4">
+        <ButtonWithLink link={project.code}>
+        Code
+        </ButtonWithLink>
+        </div>
         </code>
       </div>
     </div>
