@@ -24,7 +24,18 @@ export const skillsData = [
   'Firebase',
   'MaterialUI',
   'Nginx',
-  'Ubuntu'
+  'Ubuntu',
+  'Node JS',
+  'Microsoft Office',
+  'Markdown',
+  'Django',
+  'MaterialUI',
+  'Wordpress',
+  'Selenium',
+  'Canva',
+  ''
+
+
   
 ]
 

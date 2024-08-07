@@ -49,7 +49,7 @@ export const projectsData = [
         id: 5,
         name: 'Image Processing',
         description: "A comprehensive image processing tool that implements various techniques for image enhancement, filtering, and analysis. It provides a set of functionalities for manipulating and improving image quality",
-        tools: ['skLearn', 'skimage', 'Numpy', 'matplotlib', "Python",'Spyder'],
+        tools: ['skLearn', 'skimage', 'Numpy', 'matplotlib','OpenCV', "Python",'Spyder'],
         code: 'https://github.com/saadraj4/Image-Processing',
         demo: '',
         image: ayla,
