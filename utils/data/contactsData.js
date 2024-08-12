@@ -8,5 +8,4 @@ export const contactsData = {
     twitter: 'https://x.com/saad_raj4',
     instagram: 'https://www.instagram.com/saad.raj4/',
     stackOverflow: 'https://stackoverflow.com/users/21936390/saad-raja',
-    // devUsername: "said7388"
 }

@@ -20,7 +20,7 @@ function ContactWithoutCaptcha() {
     }
   };
 
-  const handleSendMail = async (e) => {
+  const  handleSendMail = async (e) => {
     e.preventDefault();
     if (!userInput.email || !userInput.message || !userInput.name) {
       setError({ ...error, required: true });
@@ -34,6 +34,9 @@ function ContactWithoutCaptcha() {
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+
+    console.log(process.env);
+    
 
     try {
       const res = await emailjs.send(serviceID, templateID, userInput, options);

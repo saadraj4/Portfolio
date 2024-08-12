@@ -51,7 +51,7 @@ function ContactSection() {
             </p>
           </div>
           {/*<div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">*/}
-          <div className="mt-8 lg:mt-16 flex items-center justify-between gap-1">
+          <div className="mt-8 lg:mt-16 flex items-center justify-between gap-1w">
 
             <Link target="_blank" href={personalData.github}>
               <IoLogoGithub
