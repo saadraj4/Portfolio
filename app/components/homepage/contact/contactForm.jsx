@@ -1,14 +1,13 @@
 "use client";
 // @flow strict
 import { isValidEmail } from '@/utils/check-email';
-import axios from 'axios';
-import { useState } from 'react';
+import react, { useState } from 'react';
 import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
 import emailjs from 'emailjs-com';
 
 
-function contactForm() {
+function ContactForm() {
   const [error, setError] = useState({ email: false, required: false });
   const [userInput, setUserInput] = useState({
     name: '',
@@ -137,4 +136,4 @@ function contactForm() {
   );
 };
 
-export default contactForm;
+export default ContactForm;
