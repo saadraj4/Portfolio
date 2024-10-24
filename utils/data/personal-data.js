@@ -7,7 +7,7 @@ export const personalData = {
 
   email: 'saadahmedraja1@gmail.com',
   phone: '+923025784042',
-  address: 'Chakwal, Punjab, Pakistan ',
+  address: 'Rawalpindi, Punjab, Pakistan ',
   github: 'https://github.com/saadraj4',
   facebook: 'https://web.facebook.com/saad.raj4/',
   instagram: 'https://www.instagram.com/saad.raj4/',
@@ -16,5 +16,5 @@ export const personalData = {
   stackOverflow: 'https://stackoverflow.com/users/21936390/saad-raja',
   leetcode: "",
   devUsername: "",
-  resume: "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1z-0BoMWqL2U3zOTtH0HQ6JBKKwW2XIx_/view?usp=sharing"
 }

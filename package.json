@@ -1,6 +1,6 @@
 {
   "name": "developer-portfolio",
-  "description": "Portfolio of Abu Said",
+  "description": "Portfolio of Saad Raja",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
     "@emailjs/browser": "latest",
     "@next/third-parties": "latest",
     "axios": "latest",
+    "emailjs-com": "^3.2.0",
     "lottie-react": "latest",
     "next": "latest",
     "react": "latest",

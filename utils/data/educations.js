@@ -16,5 +16,17 @@ export const educations = [
     title: "Secondary School Certificate",
     duration: "2015 - 2017",
     institution: "BISE Rawalpindi, Pakistan",
-  }
+  },
+  {
+    id: 4,
+    title: "Wordpress Development",
+    duration: "3 Months",
+    institution: "Digiskills, Pakistan",
+  },
+  {
+    id: 5,
+    title: "Freelancing Course",
+    duration: "3 Months",
+    institution: "Digiskills, Pakistan",
+  },
 ]

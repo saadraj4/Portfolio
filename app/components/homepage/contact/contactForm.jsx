@@ -5,8 +5,10 @@ import axios from 'axios';
 import { useState } from 'react';
 import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
+import emailjs from 'emailjs-com';
 
-function ContactWithoutCaptcha() {
+
+function contactForm() {
   const [error, setError] = useState({ email: false, required: false });
   const [userInput, setUserInput] = useState({
     name: '',
@@ -33,16 +35,20 @@ function ContactWithoutCaptcha() {
 
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+    const options = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
     console.log(process.env);
     
 
     try {
-      const res = await emailjs.send(serviceID, templateID, userInput, options);
-      const teleRes = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, userInput);
-
-      if (res.status === 200 || teleRes.status === 200) {
+      const res = await emailjs.send(serviceID, templateID, {
+        to_name: "Saad Raja",
+        from_name: userInput.name,
+        from_email: userInput.email,
+        message: userInput.message,
+        }, options);
+        
+      if (res.status === 200 ) {
         toast.success('Message sent successfully!');
         setUserInput({
           name: '',
@@ -66,7 +72,7 @@ function ContactWithoutCaptcha() {
         </p>
         <div className="mt-6 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label className="text-base">Your Name: </label>
+            <label className="text-base">Name: </label>
             <input
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="text"
@@ -79,7 +85,7 @@ function ContactWithoutCaptcha() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base">Your Email: </label>
+            <label className="text-base">Email: </label>
             <input
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="email"
@@ -98,7 +104,7 @@ function ContactWithoutCaptcha() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base">Your Message: </label>
+            <label className="text-base">Message: </label>
             <textarea
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               maxLength="500"
@@ -131,4 +137,4 @@ function ContactWithoutCaptcha() {
   );
 };
 
-export default ContactWithoutCaptcha;
+export default contactForm;

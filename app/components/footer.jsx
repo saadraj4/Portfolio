@@ -1,7 +1,5 @@
 // @flow strict
 import Link from 'next/link';
-import { CgGitFork } from "react-icons/cg";
-import { IoStar } from "react-icons/io5";
 
 function Footer() {
   return (
@@ -14,16 +12,6 @@ function Footer() {
           <p className="text-sm">
             © Developer Portfolio by <Link target="_blank" href="https://www.linkedin.com/in/saad-raj4/" className="text-[#16f2b3]">Saad Raja</Link>
           </p>
-          <div className="flex items-center gap-5">
-              <Link
-              target="_blank"
-              href="https://github.com/saadraj4/saad-raja-dev-site/fork"
-              className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
-            >
-              <CgGitFork />
-              <span>Fork</span>
-            </Link>
-          </div>
         </div>
       </div>
     </div >
